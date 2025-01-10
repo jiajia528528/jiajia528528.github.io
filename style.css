@@ -1,0 +1,174 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.myphoto {
+    width: 200px;
+    border-radius: 9999px;
+    animation-name: movein;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  
+}
+@keyframes movein {
+    from {
+         opacity: 0;
+         transform: rotate(-15deg);
+    }
+    to {
+         opacity: 1;
+         transform: rotate(15deg);
+    }
+}
+.photo {
+    text-align: center;
+}
+.name {
+    text-align: center;
+}
+h1 {
+    font-family: sans-serif;
+    color: #006fb5;
+    font-size: 28px;
+}
+.info {
+    color: #3d3d3d;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.button {
+    position: relative;
+    display: block;
+    border: 1px solid #3d3d3d;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #3d3d3d;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 60px;
+}
+body {
+     height: 2000px;
+}
+.top{
+    display: block;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(131, 206, 216);
+    text-align: center;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+.works{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+.work-item {
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+}
+.work-item img {
+    max-width:100% ;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-delay: .5s;
+    transition-timing-function: linear ;
+}
+.work-title{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 24px;
+    opacity: 0;
+    transition: all .5s;
+}
+.work-item:hover .work-title {
+    opacity: 1;
+}
+.work-item:hover img {
+    transform: scale(1.5);
+    filter: blur(5px);
+}
+/* 按鈕的基本樣式 */
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* 讓陰影效果能夠顯示 */
+}
+
+/* 按鈕圖標樣式 */
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out; /* 圖標的動畫效果 */
+}
+
+/* 鼠標懸停效果：按鈕背景變色，放大，並且加陰影 */
+.button:hover {
+    background-color: #e0e0e0; /* 背景顏色改變 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    transform: scale(1.1); /* 按鈕放大 */
+}
+
+/* 鼠標懸停時的圖標旋轉動畫 */
+.button:hover .icon {
+    transform: rotate(360deg); /* 圖標旋轉360度 */
+}
+
+/* 當按鈕被點擊時，實現縮小動畫 */
+.button:active {
+    transform: scale(0.95); /* 按鈕縮小 */
+    box-shadow: none; /* 點擊時不顯示陰影 */
+}
+
+/* 若想每個按鈕有不同的顏色或動畫效果，可以根據按鈕添加額外的樣式 */
+.button:nth-child(1):hover {
+    background-color: #f5a623; /* Instagram按鈕懸停顏色 */
+}
+
+.button:nth-child(2):hover {
+    background-color: #3b5998; /* Facebook按鈕懸停顏色 */
+}
+
+.button:nth-child(3):hover {
+    background-color: #f44336; /* 小紅書按鈕懸停顏色 */
+}
+
+.button:nth-child(4):hover {
+    background-color: #4CAF50; /* 作品按鈕懸停顏色 */
+}
